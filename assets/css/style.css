@@ -1,0 +1,24 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    background-color: black;
+}
+
+.scoreTitle{
+    font-size: 9pt;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.bigNumber{
+    font-size: 32pt;
+    font-weight: 100;
+}
+
+.scoreCount{
+    font-size: 12pt;
+    font-weight: 500;
+}
