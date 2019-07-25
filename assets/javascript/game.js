@@ -50,7 +50,8 @@
             // four random numbers for crystals.
     
             currentScore = 0;
-            randomTargetNumber = Math.floor(Math.random()*50) + 30;
+            randomTargetNumber = numbersArr[Math.floor(Math.random()*numbersArr.length - 1) + 1];
+            $("#targetNumber").text(randomTargetNumber);
 
             // chosenWord = words[Math.floor(Math.random() * words.length - 1) + 1];
             // console.log(chosenWord);
