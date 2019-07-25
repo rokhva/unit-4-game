@@ -15,6 +15,9 @@
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,500,800,900&display=swap" rel="stylesheet">
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+
 </head>
 
 <body>
@@ -27,25 +30,51 @@
 
     <div class="container">
         <div class="row">
-            
-            <div class="col-4 p-4 text-center scoreTitle" style="background-color: #eee; border: 3px solid black;">Target Number
-                <p class="pt-4 bigNumber">10</p>
-            </div>
-            
-            <div class="col-4 p-4 text-center scoreTitle" style="background-color: #eee; border: 3px solid black;">Current Score
+
+            <div class="col-4 p-4 text-center scoreTitle" id="targetNumber" style="background-color: #eee; border: 3px solid black;">
+                Target Number
                 <p class="pt-4 bigNumber">10</p>
             </div>
 
-            <div class="col-2 p-4 text-center scoreTitle " style="background-color: #eee; border: 3px solid black;" <p>Wins</p>
-                <p class="pt-4 scoreCount" id=wins>1</p>
-            
+            <div class="col-4 p-4 text-center scoreTitle"  style="background-color: #eee; border: 3px solid black;">
+                Current Score
+                <p class="pt-4 bigNumber" id="currentScore">0</p>
             </div>
-            <div class="col-2 p-4 text-center scoreTitle " style="background-color: #eee; border: 3px solid black;" <p>Losses</p>
+
+            <div class="col-2 p-4 text-center scoreTitle " style="background-color: #eee; border: 3px solid black;" <p>
+                Wins</p>
+                <p class="pt-4 scoreCount" id=wins>1</p>
+
+            </div>
+            <div class="col-2 p-4 text-center scoreTitle " style="background-color: #eee; border: 3px solid black;" <p>
+                Losses</p>
                 <p class="pt-4 scoreCount" id=losses>1</p>
             </div>
         </div>
     </div>
 
+    <div class="d-flex mt-4 p-4 justify-content-center ">
+        <div class="text-center crystal" id="crystalOne">
+            <img src="assets/images/mineral.svg" class="rounded"  alt="...">
+        </div>
+
+        <div class="ml-2 p-1 text-center crystal">
+                <img src="assets/images/mineral.svg" class="rounded" id="crystalTwo" alt="...">
+         </div>
+
+         <div class="ml-2 p-1 text-center crystal">
+                <img src="assets/images/mineral.svg" class="rounded" id="crystalThree" alt="...">
+         </div>
+
+         <div class="ml-2 p-1text-center crystal">
+                <img src="assets/images/mineral.svg" class="rounded" id="crystalFour" alt="...">
+         </div>
+    
+    
+    
+    
+    </div>
+    <script src="assets/javascript/game.js"></script>
 </body>
 
 </html>
