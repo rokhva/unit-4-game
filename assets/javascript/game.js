@@ -30,8 +30,8 @@
 
 // _________________________________________________________________________________________________________________________________________________________________________//
 
-var wins;
-var losses;
+var wins=0;
+var losses=0;
 var crystal1;
 var crystal2 = 5;
 var crystal3 = 4;
@@ -48,6 +48,10 @@ $("#crystalOne").click(function (_event) {
 
     //updates current score
     $("#currentScore").text(currentScore);
+
+    won();
+   
+
 })
 
 
@@ -59,6 +63,8 @@ $("#crystalTwo").click(function (_event) {
 
     //updates current score
     $("#currentScore").text(currentScore);
+
+    won();
 })
 
 
@@ -69,6 +75,8 @@ $("#crystalThree").click(function (_event) {
 
     //updates current score
     $("#currentScore").text(currentScore);
+
+    won();
 })
 
 
@@ -79,6 +87,8 @@ $("#crystalFour").click(function (_event) {
 
     //updates current score
     $("#currentScore").text(currentScore);
+
+    won();
 })
 
 
@@ -111,22 +121,35 @@ function setUp() {
     //assigns a random number value to crystal four
     crystal4 = crystalNumArr[Math.floor(Math.random() * crystalNumArr.length - 1) + 1];
     console.log(crystal4 + "c4");
+    
 
 }
 
 setUp();
 
-won();
 
+
+
+
+console.log(wins);
+console.log(losses);
 function won() {
 
     if (randomTargetNumber === currentScore){
         wins++;
-        console.log(wins);
-    }
-
-    if (currentScore > randomTargetNumber){
+        $("#wins").text(wins);
+        reset();
+        setUp();
+      
+    } else if (currentScore > randomTargetNumber){
+        $("#losses").text(losses);
         losses++;
-        console.log(losses);
+        reset();
+        setUp();
+        
     }
+}
+
+function reset() {
+    currentScore = 0;
 }
