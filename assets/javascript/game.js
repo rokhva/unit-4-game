@@ -142,8 +142,8 @@ function won() {
         setUp();
       
     } else if (currentScore > randomTargetNumber){
-        $("#losses").text(losses);
         losses++;
+        $("#losses").text(losses);
         reset();
         setUp();
         
@@ -152,4 +152,5 @@ function won() {
 
 function reset() {
     currentScore = 0;
+    $("#currentScore").text(currentScore);
 }
